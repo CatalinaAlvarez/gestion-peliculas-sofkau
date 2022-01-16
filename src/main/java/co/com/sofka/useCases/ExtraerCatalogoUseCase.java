@@ -8,7 +8,6 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 
-
 import java.io.IOException;
 import java.util.List;
 import java.util.function.Function;
@@ -29,6 +28,7 @@ public class ExtraerCatalogoUseCase implements Function<AsignarPeliculaCommand, 
                 repository.getEventsBy("catalogo", asignarPeliculaCommand.getCatalogoId()));
 
             var document = urlBase();
+
             for (Element row : document.select(".items-peliculas .item-pelicula a")) {
                 final String urlPelicula = row.attr("href");
                 try {
@@ -43,7 +43,7 @@ public class ExtraerCatalogoUseCase implements Function<AsignarPeliculaCommand, 
                     catalogo.asignarPelicula(url,nombre,genero,sinopsis,fecha);
 
                 } catch (Exception ex) {
-                    throw new ExtractScoreException();
+                    throw new ExtractCatalogoException();
                 }
             }
         return catalogo.getUncommittedChanges();
@@ -53,7 +53,7 @@ public class ExtraerCatalogoUseCase implements Function<AsignarPeliculaCommand, 
         try {
             return Jsoup.connect(baseURL).get();
         } catch (IOException e) {
-            throw new ExtractScoreException();
+            throw new ExtractCatalogoException();
         }
     }
 
