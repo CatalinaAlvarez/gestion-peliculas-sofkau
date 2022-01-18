@@ -17,7 +17,7 @@ public class AsignarPeliculaUseCaseHandle extends UseCaseHandle {
         this.extraerCatalogoUseCase = extraerCatalogoUseCase;
     }
 
-    @ConsumeEvent(value = "sofkau.program.assignscore")
+    @ConsumeEvent(value = "sofka.asignarpelicula")
     void consumeBlocking(AsignarPeliculaCommand command) {
         var events = extraerCatalogoUseCase.apply(command);
         saveCatalogo(command.getCatalogoId(), events);
