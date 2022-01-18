@@ -11,8 +11,6 @@ f
 6src/main/java/co/com/sofka/domain/generic/Command.java,0\1\01b63ebe7fbce3a491bddabadcbb08a8d7b3cbe5
 t
 Dsrc/main/java/co/com/sofka/domain/generic/DomainEventRepository.java,d\3\d382cc85756025ddffb9ba78808874421e9f31b7
-7
-pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
 t
 Dsrc/main/java/co/com/sofka/domain/generic/StoredEventSerializer.java,8\3\83241540ee44be0658e76cbe1ee5f09dd3e99248
 n
