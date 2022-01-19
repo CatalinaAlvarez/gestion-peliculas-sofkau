@@ -42,7 +42,7 @@ public class ExtraerCatalogoUseCase implements Function<AsignarPeliculaCommand, 
                     String fecha = movie.select(".info-content p:nth-of-type(2) span:nth-of-type(2)").text();
                     String url = movie.select(".player.player-normal ul:nth-of-type(2)  li:nth-of-type(1)").attr("data-video");
 
-                    catalogo.asignarPelicula(url,nombre,genero,sinopsis,fecha);
+                    catalogo.asignarPelicula(asignarPeliculaCommand.getPeliculaId(), url,nombre,genero,sinopsis,fecha);
 
                 } catch (Exception ex) {
                     throw new ExtractCatalogoException();

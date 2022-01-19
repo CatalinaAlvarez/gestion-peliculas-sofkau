@@ -33,8 +33,8 @@ public class Catalogo extends AggregateRoot {
         return catalogo;
     }
 
-    public void asignarPelicula(String url, String nombre, String genero, String sinopsis, String fecha){
-        appendChange(new PeliculaAsignada(url, nombre, genero, sinopsis, fecha)).apply();
+    public void asignarPelicula(String peliculaId, String url, String nombre, String genero, String sinopsis, String fecha){
+        appendChange(new PeliculaAsignada(peliculaId, url, nombre, genero, sinopsis, fecha)).apply();
     }
 
     public Map<String, Pelicula> peliculas() {

@@ -37,11 +37,11 @@ public class CatalogoHandle {
     void consumePeliculaAsignada(PeliculaAsignada event) {
         BasicDBObject document = new BasicDBObject();
         var key = "catalogo."+event.getAggregateId();
-        document.put(key+".pelicula."+".nombre", event.getNombre());
-        document.put(key+".pelicula."+".fecha", event.getFecha());
-        document.put(key+".pelicula."+".sinopsis", event.getSinopsis());
-        document.put(key+".pelicula."+".genero", event.getGenero());
-        document.put(key+".pelicula."+".url", event.getUrl());
+        document.put(key+".pelicula"+".nombre", event.getNombre());
+        document.put(key+".pelicula"+".fecha", event.getFecha());
+        document.put(key+".pelicula"+".sinopsis", event.getSinopsis());
+        document.put(key+".pelicula"+".genero", event.getGenero());
+        document.put(key+".pelicula"+".url", event.getUrl());
 
         BasicDBObject updateObject = new BasicDBObject();
         updateObject.put("$set", document);
