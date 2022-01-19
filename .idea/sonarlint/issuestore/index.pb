@@ -1,8 +1,6 @@
 
 l
 <src/main/java/co/com/sofka/domain/generic/AggregateRoot.java,a\7\a706fcc4af5b71c4d1a18d85bb8d423e23f7a21e
-j
-:src/main/java/co/com/sofka/domain/generic/EventChange.java,a\9\a989f32522663ae4e0635fc0e67fa1d575deb626
 t
 Dsrc/main/java/co/com/sofka/domain/generic/ChangeEventSubscriber.java,b\a\bad8ce0b92549afd8056aa396c2dfcd3589a51bf
 f
@@ -37,7 +35,5 @@ m
 =src/main/java/co/com/sofka/useCases/CrearCatalogoUseCase.java,d\7\d72d48a653e1556c5d9390bdfd7b159016d882ac
 k
 ;src/main/java/co/com/sofka/infra/generic/UseCaseHandle.java,f\c\fcffcf186c283d8cf3b1855ef78b2387e75d41cf
-w
-Gsrc/main/java/co/com/sofka/infra/handle/CrearCatalogoUseCaseHandle.java,3\c\3cce1687d5cba8a0a35b7a1a873489211d03e2e5
 t
 Dsrc/main/java/co/com/sofka/domain/catalogo/event/CatalogoCreado.java,1\f\1fb85f2bd8fccce6d0e74199e565406f438218bf
