@@ -26,7 +26,7 @@ public class CatalogoHandle {
     void consumeCatalogoCreado(CatalogoCreado event) {
         Map<String, Object> document = new HashMap<>();
         document.put("_id", event.getAggregateId());
-        document.put("name", event.getNombre());
+        document.put("nombre", event.getNombre());
 
         mongoClient.getDatabase("queries")
                 .getCollection("catalogo")
